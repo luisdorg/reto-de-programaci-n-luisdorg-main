@@ -22,15 +22,6 @@
   
     var lineas = ["", "", ""];
   
-    for (var i = 0; i < numero_str.length; i++) {
-      var digito = numero_str.charAt(i);
-  
-      var lcd_digito = caracteres[digito];
-  
-      for (var j = 0; j < 3; j++) {
-        lineas[j] += lcd_digito[j];
-      }
-    }
   
     return lineas.join("\n");
   }
