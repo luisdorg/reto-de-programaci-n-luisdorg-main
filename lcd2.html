@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>lcd</title>
+</head>
+<body>
+    <script>
+        function lcd(digitos) {
+    var caracteres = {
+      0: [" _ ", "| |", "|_|"],
+      1: ["   ", "  |", "  |"],
+      2: [" _ ", " _|", "|_ "],
+      3: [" _ ", " _|", " _|"],
+      4: ["   ", "|_|", "  |"],
+      5: [" _ ", "|_ ", " _|"],
+      6: [" _ ", "|_ ", "|_|"],
+      7: [" _ ", "  |", "  |"],
+      8: [" _ ", "|_|", "|_|"],
+      9: [" _ ", "|_|", " _|"]
+    };
+  
+    var numero_str = digitos.toString();
+  
+    var lineas = ["", "", ""];
+  
+    for (var i = 0; i < numero_str.length; i++) {
+      var digito = numero_str.charAt(i);
+  
+      var lcd_digito = caracteres[digito];
+  
+      for (var j = 0; j < 3; j++) {
+        lineas[j] += lcd_digito[j];
+      }
+    }
+  
+    return lineas.join("\n");
+  }
+  var numero = parseInt(prompt("Ingrese un número entero:"));
+  
+  var numero_lcd = lcd(numero);
+  
+  alert(numero_lcd);
+  
+  
+    </script>
+</body>
+</html>
